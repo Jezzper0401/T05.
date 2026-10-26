@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Power Consumption & Electricity Market Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- D3.js v7 CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Household TV Energy & National Electricity Market Dashboard</h1>
+      <p class="subtitle">COS30045 Data Visualisation • Week 5 Multi-chart Webpage</p>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <!-- Intro Card -->
+    <section class="intro-card">
+      <h2>Overview</h2>
+      <p>
+        As home entertainment displays grow larger and incorporate brighter panel technologies, understanding power consumption 
+        becomes vital for consumers managing electricity costs. The visualisations below explore television energy efficiency 
+        ratings across display technologies alongside long-term trends in wholesale power prices across Australia (1998–2024).
+      </p>
+    </section>
+
+    <!-- Chart Grid -->
+    <div class="chart-grid">
+      <!-- 1. Scatter Plot -->
+      <section class="chart-card">
+        <div class="card-header">
+          <h3>1. Energy Consumption vs. Star Rating (Scatter Plot)</h3>
+          <p class="description">Displays individual television models. Higher star ratings correlate with lower annual kWh.</p>
+        </div>
+        <div id="scatter-chart" class="chart-wrapper"></div>
+      </section>
+
+      <!-- 2. Line Chart -->
+      <section class="chart-card">
+        <div class="card-header">
+          <h3>2. Spot Electricity Prices 1998–2024 (Line Chart)</h3>
+          <p class="description">Average wholesale power spot prices ($/MWh) across the National Electricity Market (NEM).</p>
+        </div>
+        <div id="line-chart" class="chart-wrapper"></div>
+      </section>
+
+      <!-- 3. Bar Chart -->
+      <section class="chart-card">
+        <div class="card-header">
+          <h3>3. Mean Energy Consumption for 55" TVs (Bar Chart)</h3>
+          <p class="description">Comparison of mean annual energy consumption (kWh/year) exclusively for popular 55-inch models.</p>
+        </div>
+        <div id="bar-chart" class="chart-wrapper"></div>
+      </section>
+
+      <!-- 4. Donut Chart -->
+      <section class="chart-card">
+        <div class="card-header">
+          <h3>4. Mean Energy Footprint by Screen Tech (Donut Chart)</h3>
+          <p class="description">Share of mean energy consumption across LCD, LED, and OLED across all TV sizes combined.</p>
+        </div>
+        <div id="donut-chart" class="chart-wrapper"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>COS30045 Data Visualisation • Week 5 Tutorial Exercise</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/scatterPlot.js"></script>
+  <script src="js/lineChart.js"></script>
+  <script src="js/barChart.js"></script>
+  <script src="js/donutChart.js"></script>
+</body>
+</html>
